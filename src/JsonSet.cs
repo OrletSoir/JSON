@@ -91,6 +91,36 @@ namespace OrletSoir.JSON
         #endregion
 
         #region additional methods
+        public void Add(string key, int value)
+        {
+            this.Add(key, new JsonVariable(value));
+        }
+
+        public void Add(string key, double value)
+        {
+            this.Add(key, new JsonVariable(value));
+        }
+
+        public void Add(string key, decimal value)
+        {
+            this.Add(key, new JsonVariable(value));
+        }
+
+        public void Add(string key, bool value)
+        {
+            this.Add(key, new JsonVariable(value));
+        }
+
+        public void Add(string key, DateTime value)
+        {
+            this.Add(key, new JsonVariable(value));
+        }
+
+        public void Add(string key, string value)
+        {
+            this.Add(key, new JsonVariable(value));
+        }
+
         public override string ToString()
         {
             return string.Format("{0} (Count = {1})", GetType().Name, Count);
