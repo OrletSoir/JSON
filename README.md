@@ -3,7 +3,7 @@ JSON parser for C#
 
 ----
 
-This is a very simplistic, yet effective JSON parser for C# that I have written for one of my personal projects a long while ago, when there actually weren't all that many JSON libraries around.
+This is a very simplistic JSON parser for C#, that I have written for one of my personal projects a long while ago, when there actually weren't all that many JSON libraries around.
 
 It is tested to work on .NET 3.5 platform, but, theoretically, could be back-ported into 2.0 or even below, with little modification, since it mostly uses base .NET types (collections, dictionaries, lists).
 
