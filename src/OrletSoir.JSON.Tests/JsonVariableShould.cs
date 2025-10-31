@@ -128,5 +128,18 @@ namespace OrletSoir.JSON.Tests
                 i => i.Type.ShouldBe(JsonType.Set),
                 i => i.ShouldContain(s => s.Key == "String" && value.Type == JsonType.String && value.AsString() == someString));
         }
+
+        [Theory]
+        [InlineData("test-no-escapes", @"""test-no-escapes""")]
+        [InlineData("test-with-\"quotes\"", @"""test-with-\""quotes\""""")]
+        [InlineData("C:\\Windows\\Path\\", @"""C:\\Windows\\Path\\""")]
+        public void EscapeStringMagicCharacters(string input, string expected)
+        {
+            JsonVariable variable = new JsonVariable(input);
+
+            string result = variable.ToJsonString();
+
+            result.ShouldBe(expected);
+        }
     }
 }

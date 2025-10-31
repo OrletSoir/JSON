@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.CodeDom" Version="9.0.10" />
-  </ItemGroup>
-
-  <ItemGroup>
     <InternalsVisibleTo Include="OrletSoir.JSON.Tests" />
   </ItemGroup>
 </Project>

@@ -1,11 +1,9 @@
-﻿using Microsoft.CSharp;
-using System;
-using System.CodeDom;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Web;
 
 namespace OrletSoir.JSON
 {
@@ -248,14 +246,7 @@ namespace OrletSoir.JSON
         /// <param name="str">string</param>
         /// <returns>string</returns>
         public static string ToLiteral(this string input)
-        {
-            using (StringWriter writer = new StringWriter())
-            using (CSharpCodeProvider provider = new CSharpCodeProvider())
-            {
-                provider.GenerateCodeFromExpression(new CodePrimitiveExpression(input), writer, null);
-                return writer.ToString();
-            }
-        }
+            => $"\"{HttpUtility.JavaScriptStringEncode(input)}\"";
 
         /// <summary>
         /// Creates a DateTime object from a unix timestamp.
