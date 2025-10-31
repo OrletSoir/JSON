@@ -1,3 +1,5 @@
+[![.NET](https://github.com/OrletSoir/JSON/actions/workflows/dotnet.yml/badge.svg)](https://github.com/OrletSoir/JSON/actions/workflows/dotnet.yml)
+
 # JSON
 JSON parser for C#
 
